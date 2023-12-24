@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.db import models
-from django.utils.encoding import force_text, python_2_unicode_compatible
-from django.utils.six import string_types
-from django.utils.translation import ugettext_lazy as _
+from django.utils.encoding import force_str
+from six import string_types
+from django.utils.translation import gettext_lazy as _
 
 import likert_field.forms as forms
 
 
-@python_2_unicode_compatible
 class LikertField(models.IntegerField):
     """A Likert field is simply stored as an IntegerField"""
 
